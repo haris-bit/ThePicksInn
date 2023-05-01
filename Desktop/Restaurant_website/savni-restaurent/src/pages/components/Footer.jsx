@@ -2,7 +2,7 @@ import Image from "next/image"
 // import circled facebook, twitter and instagram icons from react-icons
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer
             className='w-full h-96 relative'
@@ -180,3 +180,5 @@ export const Footer = () => {
         </footer>
     )
 }
+
+export default Footer

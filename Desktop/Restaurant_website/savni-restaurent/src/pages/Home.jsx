@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer } from './components/Footer'
+import Footer  from './components/Footer'
 import Navbar from './components/Navbar'
 // import facebook, instagram and twitter icons from react icons
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
