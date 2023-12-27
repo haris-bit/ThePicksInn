@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Data</title>
+</head>
+<body>
+    <h1>My Data</h1>
+
+    {% if data_from_api %}
+        <h2>Data from API:</h2>
+        <ul>
+            {% for player in data_from_api %}
+                <li>
+                    <strong>Name:</strong> {{ player.name }}<br>
+                    <strong>Minutes Played:</strong> {{ player.minutes_played }}<br>
+                    <strong>Games Played:</strong> {{ player.games_played }}<br>
+                    <strong>Three-Point Attempt Rate:</strong> {{ player.three_point_attempt_rate }}<br>
+                    <strong>Total Rebound Percentage:</strong> {{ player.total_rebound_percentage }}<br>
+                    <strong>Win Shares:</strong> {{ player.win_shares }}<br>
+                    <strong>Win Shares Per 48 Minutes:</strong> {{ player.win_shares_per_48_minutes }}<br>
+                    <strong>Box Plus-Minus:</strong> {{ player.box_plus_minus }}<br>
+                    <strong>Value Over Replacement Player:</strong> {{ player.value_over_replacement_player }}<br>
+                    <strong>Player Efficiency Rating:</strong> {{ player.player_efficiency_rating }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Error fetching data from the API. Status code: {{ status_code }}</p>
+    {% endif %}
+</body>
+</html>
